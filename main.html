@@ -8,11 +8,10 @@
 </head>
 <body>
   <div class="container">
+    <!-- Initial screen -->
+    <h1>Tic Tac Toe</h1>
 
-    <!-- ===== Start Screen ===== -->
-    <h1 class="title">Tic Tac Toe</h1>
-
-    <form id="start-form" class="start-form">
+    <form id="start-form">
       <label>
         Player 1
         <input id="player-1" type="text" placeholder="enter name" required />
@@ -26,29 +25,24 @@
       <button id="submit" type="submit">Start Game</button>
     </form>
 
-    <!-- ===== Game Screen (hidden initially) ===== -->
-    <div id="game" class="game hidden">
-      <h1 class="title">Tic Tac Toe</h1>
+    <!-- Game screen (hidden initially) -->
+    <div id="game" class="hidden">
+      <h1>Tic Tac Toe</h1>
+
       <div class="message"></div>
 
-      <div class="board" role="grid" aria-label="Tic Tac Toe board">
-        <!-- 9 cells with ids 1..9 -->
-        <button class="cell" id="1" aria-label="cell 1"></button>
-        <button class="cell" id="2" aria-label="cell 2"></button>
-        <button class="cell" id="3" aria-label="cell 3"></button>
-        <button class="cell" id="4" aria-label="cell 4"></button>
-        <button class="cell" id="5" aria-label="cell 5"></button>
-        <button class="cell" id="6" aria-label="cell 6"></button>
-        <button class="cell" id="7" aria-label="cell 7"></button>
-        <button class="cell" id="8" aria-label="cell 8"></button>
-        <button class="cell" id="9" aria-label="cell 9"></button>
-      </div>
-
-      <div class="actions">
-        <button id="reset" type="button">Reset</button>
+      <div class="board">
+        <button class="cell" id="1"></button>
+        <button class="cell" id="2"></button>
+        <button class="cell" id="3"></button>
+        <button class="cell" id="4"></button>
+        <button class="cell" id="5"></button>
+        <button class="cell" id="6"></button>
+        <button class="cell" id="7"></button>
+        <button class="cell" id="8"></button>
+        <button class="cell" id="9"></button>
       </div>
     </div>
-
   </div>
 
   <script src="script.js"></script>

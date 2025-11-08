@@ -1,11 +1,8 @@
-/*  your css code here. If applicable */
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: system-ui, Arial, sans-serif;
   display: grid;
   place-items: start center;
   min-height: 100vh;
@@ -13,71 +10,70 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 92%;
   max-width: 560px;
 }
 
-.title {
+h1 {
   text-align: center;
-  font-family: "Permanent Marker", cursive;
-  margin: 8px 0 16px;
+  margin: 12px 0 18px;
 }
 
-.start-form {
+/* Start screen */
+#start-form {
   display: grid;
   gap: 14px;
   justify-items: center;
 }
 
-.start-form label {
+#start-form label {
   display: grid;
   grid-template-columns: 90px 1fr;
-  align-items: center;
   gap: 8px;
   width: 100%;
   max-width: 420px;
+  align-items: center;
 }
 
-.start-form input {
+#start-form input {
   padding: 10px 12px;
   border: 2px solid #000;
+  font-size: 16px;
   outline: none;
+}
+
+#submit {
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
   font-size: 16px;
 }
 
-.start-form button {
-  margin-top: 8px;
-  padding: 12px 24px;
-  border: 2px solid #000;
-  border-radius: 10px;
-  background: white;
-  font-size: 18px;
-  cursor: pointer;
+.hidden {
+  display: none;
 }
 
-.hidden { display: none; }
-
-.game .message {
+/* Game screen */
+.message {
   text-align: center;
-  margin: 8px 0 16px;
   font-weight: 600;
+  margin-bottom: 14px;
 }
 
-/* Board */
 .board {
-  margin: 0 auto 16px;
+  margin: 0 auto;
   width: 360px;
   height: 360px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
   border: 2px solid #000;
 }
 
 .cell {
   border: 1px solid #000;
-  background: #ffc0cb; /* light pink */
-  font-family: "Permanent Marker", cursive;
+  background: #ffc0cb;
   font-size: 64px;
   line-height: 1;
   cursor: pointer;
@@ -89,17 +85,5 @@ body {
 
 .winner {
   background: purple !important;
-  color: white;
-}
-
-.actions {
-  text-align: center;
-}
-
-#reset {
-  padding: 8px 16px;
-  border: 2px solid #000;
-  border-radius: 8px;
-  background: white;
-  cursor: pointer;
+  color: #fff;
 }
